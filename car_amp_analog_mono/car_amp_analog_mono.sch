@@ -1,0 +1,455 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+12V #PWR?
+U 1 1 6123F433
+P 1000 1200
+F 0 "#PWR?" H 1000 1050 50  0001 C CNN
+F 1 "+12V" H 1015 1373 50  0000 C CNN
+F 2 "" H 1000 1200 50  0001 C CNN
+F 3 "" H 1000 1200 50  0001 C CNN
+	1    1000 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 1200 1350 1200
+$Comp
+L Device:D_TVS D?
+U 1 1 6123FE80
+P 1350 1450
+F 0 "D?" V 1304 1530 50  0000 L CNN
+F 1 "D_TVS" V 1395 1530 50  0000 L CNN
+F 2 "" H 1350 1450 50  0001 C CNN
+F 3 "~" H 1350 1450 50  0001 C CNN
+	1    1350 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1350 1200 1350 1300
+Wire Wire Line
+	1350 1600 1350 2050
+$Comp
+L power:GND #PWR?
+U 1 1 61241173
+P 1350 2050
+F 0 "#PWR?" H 1350 1800 50  0001 C CNN
+F 1 "GND" H 1355 1877 50  0000 C CNN
+F 2 "" H 1350 2050 50  0001 C CNN
+F 3 "" H 1350 2050 50  0001 C CNN
+	1    1350 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1350 1200
+Wire Wire Line
+	1350 1200 1900 1200
+$Comp
+L Transistor_FET:FQP27P06 Q?
+U 1 1 61248AED
+P 2100 1300
+F 0 "Q?" V 2442 1300 50  0000 C CNN
+F 1 "FQP27P06" V 2351 1300 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 2300 1225 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/FQP27P06-D.PDF" H 2100 1300 50  0001 L CNN
+	1    2100 1300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2100 1500 2100 1550
+$Comp
+L Device:R R1
+U 1 1 6124991D
+P 2100 1750
+F 0 "R1" H 2170 1796 50  0000 L CNN
+F 1 "12K" H 2170 1705 50  0000 L CNN
+F 2 "" V 2030 1750 50  0001 C CNN
+F 3 "~" H 2100 1750 50  0001 C CNN
+	1    2100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1900 2100 2050
+$Comp
+L power:GND #PWR?
+U 1 1 6124A22C
+P 2100 2050
+F 0 "#PWR?" H 2100 1800 50  0001 C CNN
+F 1 "GND" H 2105 1877 50  0000 C CNN
+F 2 "" H 2100 2050 50  0001 C CNN
+F 3 "" H 2100 2050 50  0001 C CNN
+	1    2100 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 1550 2500 1550
+Wire Wire Line
+	2500 1550 2500 1650
+Connection ~ 2100 1550
+Wire Wire Line
+	2100 1550 2100 1600
+$Comp
+L Device:C C1
+U 1 1 6124AB73
+P 2500 1800
+F 0 "C1" H 2615 1846 50  0000 L CNN
+F 1 "15nF" H 2615 1755 50  0000 L CNN
+F 2 "" H 2538 1650 50  0001 C CNN
+F 3 "~" H 2500 1800 50  0001 C CNN
+	1    2500 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1950 2500 2050
+$Comp
+L power:GND #PWR?
+U 1 1 6124B0B9
+P 2500 2050
+F 0 "#PWR?" H 2500 1800 50  0001 C CNN
+F 1 "GND" H 2505 1877 50  0000 C CNN
+F 2 "" H 2500 2050 50  0001 C CNN
+F 3 "" H 2500 2050 50  0001 C CNN
+	1    2500 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1200 3000 1200
+$Comp
+L Regulator_Linear:L7805 U1
+U 1 1 6124BAAC
+P 3400 1200
+F 0 "U1" H 3400 1442 50  0000 C CNN
+F 1 "L7805" H 3400 1351 50  0000 C CNN
+F 2 "" H 3425 1050 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3400 1150 50  0001 C CNN
+	1    3400 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 1500 3400 1800
+Wire Wire Line
+	3000 1200 3000 1400
+Connection ~ 3000 1200
+Wire Wire Line
+	3000 1200 3100 1200
+$Comp
+L Device:C C2
+U 1 1 6124C60B
+P 3000 1550
+F 0 "C2" H 3115 1596 50  0000 L CNN
+F 1 "0.33uF" H 3115 1505 50  0000 L CNN
+F 2 "" H 3038 1400 50  0001 C CNN
+F 3 "~" H 3000 1550 50  0001 C CNN
+	1    3000 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1700 3000 1800
+Wire Wire Line
+	3700 1200 3800 1200
+Wire Wire Line
+	3800 1200 3800 1400
+$Comp
+L Device:C C3
+U 1 1 6124DC1C
+P 3800 1550
+F 0 "C3" H 3915 1596 50  0000 L CNN
+F 1 "0.1uF" H 3915 1505 50  0000 L CNN
+F 2 "" H 3838 1400 50  0001 C CNN
+F 3 "~" H 3800 1550 50  0001 C CNN
+	1    3800 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 1800 3400 1800
+Connection ~ 3400 1800
+Wire Wire Line
+	3400 1800 3400 2050
+Wire Wire Line
+	3400 1800 3800 1800
+Wire Wire Line
+	3800 1800 3800 1700
+$Comp
+L power:GND #PWR?
+U 1 1 6124E998
+P 3400 2050
+F 0 "#PWR?" H 3400 1800 50  0001 C CNN
+F 1 "GND" H 3405 1877 50  0000 C CNN
+F 2 "" H 3400 2050 50  0001 C CNN
+F 3 "" H 3400 2050 50  0001 C CNN
+	1    3400 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1200 4050 1200
+Connection ~ 3800 1200
+Wire Notes Line
+	4400 850  4400 2350
+Wire Notes Line
+	4400 2350 850  2350
+Wire Notes Line
+	850  2350 850  850 
+Wire Notes Line
+	850  850  4400 850 
+Text Notes 900  800  0    50   ~ 0
+5V Regulator
+$Comp
+L power:+5V #PWR?
+U 1 1 612622EF
+P 4050 1200
+F 0 "#PWR?" H 4050 1050 50  0001 C CNN
+F 1 "+5V" V 4065 1328 50  0000 L CNN
+F 2 "" H 4050 1200 50  0001 C CNN
+F 3 "" H 4050 1200 50  0001 C CNN
+	1    4050 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U2
+U 1 1 61262F2A
+P 7450 1550
+F 0 "U2" H 7450 1917 50  0000 C CNN
+F 1 "NE5532" H 7450 1826 50  0000 C CNN
+F 2 "" H 7450 1550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 7450 1550 50  0001 C CNN
+	1    7450 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U2
+U 2 1 61263992
+P 7450 2400
+F 0 "U2" H 7450 2767 50  0000 C CNN
+F 1 "NE5532" H 7450 2676 50  0000 C CNN
+F 2 "" H 7450 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 7450 2400 50  0001 C CNN
+	2    7450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NE5532 U?
+U 3 1 612673EC
+P 5550 1850
+F 0 "U?" H 5508 1896 50  0000 L CNN
+F 1 "NE5532" H 5508 1805 50  0000 L CNN
+F 2 "" H 5550 1850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne5532.pdf" H 5550 1850 50  0001 C CNN
+	3    5550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61269D1B
+P 5450 2300
+F 0 "#PWR?" H 5450 2050 50  0001 C CNN
+F 1 "GND" H 5455 2127 50  0000 C CNN
+F 2 "" H 5450 2300 50  0001 C CNN
+F 3 "" H 5450 2300 50  0001 C CNN
+	1    5450 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2300 5450 2250
+Wire Wire Line
+	5450 1550 5450 1450
+$Comp
+L power:+5V #PWR?
+U 1 1 6126B8F4
+P 5450 1400
+F 0 "#PWR?" H 5450 1250 50  0001 C CNN
+F 1 "+5V" H 5465 1573 50  0000 C CNN
+F 2 "" H 5450 1400 50  0001 C CNN
+F 3 "" H 5450 1400 50  0001 C CNN
+	1    5450 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1450 5100 1450
+Wire Wire Line
+	5100 1450 5100 1700
+Connection ~ 5450 1450
+Wire Wire Line
+	5450 1450 5450 1400
+$Comp
+L Device:C C?
+U 1 1 6126CBCB
+P 5100 1850
+F 0 "C?" H 5215 1896 50  0000 L CNN
+F 1 "C" H 5215 1805 50  0000 L CNN
+F 2 "" H 5138 1700 50  0001 C CNN
+F 3 "~" H 5100 1850 50  0001 C CNN
+	1    5100 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2000 5100 2250
+Wire Wire Line
+	5100 2250 5450 2250
+Connection ~ 5450 2250
+Wire Wire Line
+	5450 2250 5450 2150
+Wire Wire Line
+	7750 1550 7800 1550
+$Comp
+L Device:R R?
+U 1 1 6128A85A
+P 8000 1550
+F 0 "R?" V 7793 1550 50  0000 C CNN
+F 1 "R" V 7884 1550 50  0000 C CNN
+F 2 "" V 7930 1550 50  0001 C CNN
+F 3 "~" H 8000 1550 50  0001 C CNN
+	1    8000 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6128AC93
+P 8000 2400
+F 0 "R?" V 7793 2400 50  0000 C CNN
+F 1 "R" V 7884 2400 50  0000 C CNN
+F 2 "" V 7930 2400 50  0001 C CNN
+F 3 "~" H 8000 2400 50  0001 C CNN
+	1    8000 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7750 2400 7800 2400
+Wire Wire Line
+	8150 1550 8200 1550
+Wire Wire Line
+	8200 2400 8150 2400
+Wire Wire Line
+	8200 1550 8300 1550
+Connection ~ 8200 1550
+Wire Wire Line
+	8200 1550 8200 2400
+Text GLabel 8300 1550 2    50   Output ~ 0
+VBIAS
+Wire Wire Line
+	7800 1550 7800 1850
+Wire Wire Line
+	7800 1850 7100 1850
+Wire Wire Line
+	7100 1850 7100 1650
+Wire Wire Line
+	7100 1650 7150 1650
+Connection ~ 7800 1550
+Wire Wire Line
+	7800 1550 7850 1550
+Wire Wire Line
+	7800 2400 7800 2700
+Wire Wire Line
+	7800 2700 7100 2700
+Wire Wire Line
+	7100 2700 7100 2500
+Wire Wire Line
+	7100 2500 7150 2500
+Connection ~ 7800 2400
+Wire Wire Line
+	7800 2400 7850 2400
+Wire Wire Line
+	6900 1450 6900 2300
+Wire Wire Line
+	6900 2300 7150 2300
+Connection ~ 6900 1450
+Wire Wire Line
+	6900 1450 7150 1450
+Wire Wire Line
+	6050 1450 6050 1500
+Wire Wire Line
+	6050 1450 6500 1450
+$Comp
+L Device:C C?
+U 1 1 6129ECFA
+P 6050 1650
+F 0 "C?" H 6165 1696 50  0000 L CNN
+F 1 "C" H 6165 1605 50  0000 L CNN
+F 2 "" H 6088 1500 50  0001 C CNN
+F 3 "~" H 6050 1650 50  0001 C CNN
+	1    6050 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612A0070
+P 6050 1800
+F 0 "#PWR?" H 6050 1550 50  0001 C CNN
+F 1 "GND" H 6055 1627 50  0000 C CNN
+F 2 "" H 6050 1800 50  0001 C CNN
+F 3 "" H 6050 1800 50  0001 C CNN
+	1    6050 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1450 6500 1500
+Connection ~ 6500 1450
+Wire Wire Line
+	6500 1450 6900 1450
+$Comp
+L Device:R R?
+U 1 1 612A15EF
+P 6500 1650
+F 0 "R?" H 6570 1696 50  0000 L CNN
+F 1 "R" H 6570 1605 50  0000 L CNN
+F 2 "" V 6430 1650 50  0001 C CNN
+F 3 "~" H 6500 1650 50  0001 C CNN
+	1    6500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 612A2A7A
+P 6500 1800
+F 0 "#PWR?" H 6500 1550 50  0001 C CNN
+F 1 "GND" H 6505 1627 50  0000 C CNN
+F 2 "" H 6500 1800 50  0001 C CNN
+F 3 "" H 6500 1800 50  0001 C CNN
+	1    6500 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 612A2D15
+P 6500 1250
+F 0 "R?" H 6570 1296 50  0000 L CNN
+F 1 "R" H 6570 1205 50  0000 L CNN
+F 2 "" V 6430 1250 50  0001 C CNN
+F 3 "~" H 6500 1250 50  0001 C CNN
+	1    6500 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 1400 6500 1450
+$Comp
+L power:+5V #PWR?
+U 1 1 612A67A6
+P 6500 1100
+F 0 "#PWR?" H 6500 950 50  0001 C CNN
+F 1 "+5V" H 6515 1273 50  0000 C CNN
+F 2 "" H 6500 1100 50  0001 C CNN
+F 3 "" H 6500 1100 50  0001 C CNN
+	1    6500 1100
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4900 850  8650 850 
+Wire Notes Line
+	8650 850  8650 2800
+Wire Notes Line
+	8650 2800 4900 2800
+Wire Notes Line
+	4900 2800 4900 850 
+Text Notes 5500 800  2    50   ~ 0
+Bias Generator
+$EndSCHEMATC
