@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TDA7377A
+D Dual full bridge motor driver, up to 46V, 4A, Multiwatt-15
+K H-bridge motor driver
+F http://www.e-ele.net/DataSheet/TDA7377.pdf
+$ENDCMP
+#
+#End Doc Library
